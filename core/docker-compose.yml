@@ -1,0 +1,23 @@
+version: "3"
+services:
+  outline_vpn_bot:
+    build: .
+    ports:
+      - '80:8000'
+    container_name: outline_vpn_bot_django
+    restart: on-failure
+    environment:
+      - SECRET_KEY_OUTLINE_BOT=${SECRET_KEY_OUTLINE_BOT}
+      - PROD_OUTLINE_BOT=${PROD_OUTLINE_BOT}
+      - TELEGRAM_BOT_SECRET_OUTLINE_BOT=${TELEGRAM_BOT_SECRET_OUTLINE_BOT}
+      - API_URL_OUTLINE_BOT=${API_URL_OUTLINE_BOT}
+      - CERT_SHA256_OUTLINE_BOT=${CERT_SHA256_OUTLINE_BOT}
+      - api_url_spb=${api_url_spb}
+      - api_url_almaty=${api_url_almaty}
+      - api_url_ny=${api_url_ny}
+      - cert_sha256_spb=${cert_sha256_spb}
+      - cert_sha256_almaty=${cert_sha256_almaty}
+      - cert_sha256_ny=${cert_sha256_ny}
+    volumes:
+      - ./volume/media:/app/media
+      - ./volume/db:/app/db

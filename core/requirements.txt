@@ -1,0 +1,17 @@
+asgiref==3.6.0
+Authlib==1.2.0
+certifi==2022.12.7
+cffi==1.15.1
+charset-normalizer==3.1.0
+cryptography==40.0.2
+Django==4.2
+envparse==0.2.0
+idna==3.4
+outline-vpn-api==4.0.1
+Pillow==10.0.1
+pycparser==2.21
+pyTelegramBotAPI==4.11.0
+requests==2.29.0
+six==1.16.0
+sqlparse==0.4.4
+urllib3==1.26.15
